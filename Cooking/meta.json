@@ -1,0 +1,62 @@
+{
+  "lang":"en",
+  "name":"cook_model_03",
+  "version":"0.0.0",
+  "spacy_version":">=2.3.7",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"cae72e46d",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "ner"
+  ],
+  "factories":{
+    "ner":"ner"
+  },
+  "labels":{
+    "ner":[
+      "Bakery Item",
+      "Beverages",
+      "Brand/Organization",
+      "Chinese Food",
+      "City",
+      "Continental Food",
+      "Country",
+      "Crockery",
+      "Dairy Product",
+      "DateTime",
+      "Deserts/Sweet",
+      "Event",
+      "Fast Food",
+      "Flour",
+      "Food_Eatery",
+      "Fruits",
+      "General Ingredient",
+      "Kitchen Utensils/Appliances",
+      "Location",
+      "Meat",
+      "Oil",
+      "Pakistani Food",
+      "Person",
+      "Price",
+      "Product",
+      "Province",
+      "Pulses/Cereals",
+      "Quantity",
+      "Rating",
+      "Sauces",
+      "Seeds",
+      "Spices",
+      "Street Food",
+      "Vegetables"
+    ]
+  }
+}

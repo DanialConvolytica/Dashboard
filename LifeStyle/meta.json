@@ -1,0 +1,50 @@
+{
+  "lang":"en",
+  "name":"lifestyle_model_06",
+  "version":"0.0.0",
+  "spacy_version":">=2.3.7",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"cae72e46d",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "ner"
+  ],
+  "factories":{
+    "ner":"ner"
+  },
+  "labels":{
+    "ner":[
+      "Bath Care Product",
+      "Beauty tools",
+      "Body Care Product",
+      "City ",
+      "Clothes",
+      "Cosmetic Product",
+      "Cosmetic Surgery",
+      "Country",
+      "DateTime",
+      "Fashion Accessories",
+      "Fragrance",
+      "Grooming Product",
+      "Hair Care Product",
+      "Illness/Disease",
+      "Medical Condition",
+      "Medical Supplies",
+      "Organization/Brand",
+      "Person",
+      "Price",
+      "Rating",
+      "Shoewear",
+      "Skin Care Product"
+    ]
+  }
+}

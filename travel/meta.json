@@ -1,0 +1,50 @@
+{
+  "lang":"en",
+  "name":"travel_002",
+  "version":"0.0.0",
+  "spacy_version":">=2.3.7",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"cae72e46d",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "ner"
+  ],
+  "factories":{
+    "ner":"ner"
+  },
+  "labels":{
+    "ner":[
+      "Beach",
+      "Career",
+      "City",
+      "Contact Number",
+      "Country",
+      "DateTime",
+      "Distance",
+      "District",
+      "Hills",
+      "Hotel/Motel",
+      "Lakes",
+      "Location",
+      "Mountains",
+      "Organization/Brand",
+      "Person",
+      "Province",
+      "Rating",
+      "Transportation Services",
+      "Travel Agency",
+      "Valley",
+      "Village",
+      "Visa type"
+    ]
+  }
+}
