@@ -1,9 +1,13 @@
+from curses import raw
 from typing import List, Sequence, Tuple, Optional
+from unittest.mock import sentinel
 
 import pandas as pd
 import streamlit as st
 import spacy
 from spacy import displacy
+from textblob import TextBlob 
+
 
 st.title("Dashboard")
 
@@ -41,6 +45,16 @@ if st.button("Analyze"):
         style = "<style> mark.entity { display: inline-block }</style>"
         render_ent = displacy.render(docx, style='ent', jupyter=False)
         st.markdown(render_ent, unsafe_allow_html=True)    
+
+    def sentence_analysis(path,text):
+        """Sentence Analysis """
+        st.subheader("Sentence Analysis ")
+        sentiment = (path,raw_text)
+        intent = (path,raw_text)
+        emotion = (path,raw_text)
+        language = (path,raw_text)
+        
+
 
     if choice=='General':
         nlp = spacy.load('general')
