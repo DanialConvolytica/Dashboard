@@ -14,7 +14,6 @@ choice = st.sidebar.selectbox("Industries Model",menu)
 raw_text = st.text_area("Your Text"," ")
 
 if st.button("Analyze"):
-        
 
     def get_html(html: str):
         """Convert HTML so it can be rendered."""
