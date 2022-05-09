@@ -57,8 +57,6 @@ if st.button("Analyze"):
         intent = (path,raw_text)
         emotion = (path,raw_text)
         language = (path,raw_text)
-        
-
 
     if choice=='General':
         nlp = spacy.load('general')
