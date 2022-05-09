@@ -13,20 +13,21 @@ st.title("Dashboard")
 
 col1, col2 = st.columns(2)
 
-menu = ["general",
-        "fmcg",
-        "banking/fintech",
-        "travel",
-        "lifestyle beauty and makeup",
-        "automotive",
-        "education",
-        "jobs and careers",
-        "fashion",
-        "technology",
-        "food & beverages",
-        "parenting",
-        "cooking & recipes"]
-
+menu = ["General","Cooking","LifeStyle","Food","Education","Travel","Parenting"]
+        # ,"fmcg",
+        # "banking/fintech",
+        # "travel",
+        # "general",
+        # "lifestyle beauty and makeup",
+        # "automotive",
+        # "education",
+        # "jobs and careers",
+        # "fashion",
+        # "technology",
+        # "food & beverages",
+        # "parenting",
+        # "cooking & recipes"]
+        
 choice = st.sidebar.selectbox("Industries Model",menu)
 
 raw_text = st.text_area("Your Text"," ")
@@ -68,6 +69,7 @@ if st.button("Analyze"):
         emotion = (path,raw_text)
         language = (path,raw_text)
 
+    
     def ner_model(path,text):
         nlp = spacy.load(path)
         docx = nlp(text)
