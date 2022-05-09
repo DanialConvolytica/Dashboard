@@ -16,8 +16,6 @@ col1, col2 = st.columns(2)
 menu = ["General","Cooking","LifeStyle","Food","Education","Travel","Parenting"]
 choice = st.sidebar.selectbox("Industries Model",menu)
 
-# global raw_text
-# with col1:
 raw_text = st.text_area("Your Text"," ")
 
 if st.button("Analyze"):
@@ -47,62 +45,66 @@ if st.button("Analyze"):
         )
         with st.expander(title):    
             style = "<style> mark.entity { display: inline-block }</style>"
-            render_ent = displacy.render(docx, style='ent', jupyter=False)
+            render_ent = displacy.render(doc, style='ent', jupyter=False)
             st.markdown(render_ent, unsafe_allow_html=True)    
 
     def sentence_analysis(path,text):
-        """Sentence Analysis """
-        st.subheader("Sentence Analysis ")
+        st.header("Sentence Analysis")
         sentiment = (path,raw_text)
         intent = (path,raw_text)
         emotion = (path,raw_text)
         language = (path,raw_text)
 
-    if choice=='General':
-        nlp = spacy.load('general')
-        docx = nlp(raw_text)
+    def ner_model(path,text):
+        nlp = spacy.load(path)
+        docx = nlp(text)
         visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+    
+    if choice=='General':
+        ner_model('general',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('general')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='Cooking':
-        nlp = spacy.load('Cooking')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('Cooking',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('Cooking')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='LifeStyle':
-        nlp = spacy.load('LifeStyle')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('LifeStyle',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('LifeStyle')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='Food':
-        nlp = spacy.load('food')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('food',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('food')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='Education':
-        nlp = spacy.load('education')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('education',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('education')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='Travel':
-        nlp = spacy.load('travel')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('travel',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('travel')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
 
     elif choice=='Parenting':
-        nlp = spacy.load('parenting')
-        docx = nlp(raw_text)
-        visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
-        with col2:
-            sentence_analysis('xyz',raw_text)
+        ner_model('parenting',raw_text)
+        sentence_analysis('xyz',raw_text)
+        # nlp = spacy.load('parenting')
+        # docx = nlp(raw_text)
+        # visualize_ner(docx, labels=nlp.get_pipe("ner").labels, key=1)
