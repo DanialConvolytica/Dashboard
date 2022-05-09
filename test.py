@@ -13,7 +13,20 @@ st.title("Dashboard")
 
 col1, col2 = st.columns(2)
 
-menu = ["General","Cooking","LifeStyle","Food","Education","Travel","Parenting"]
+menu = ["general",
+        "fmcg",
+        "banking/fintech",
+        "travel",
+        "lifestyle beauty and makeup",
+        "automotive",
+        "education",
+        "jobs and careers",
+        "fashion",
+        "technology",
+        "food & beverages",
+        "parenting",
+        "cooking & recipes"]
+
 choice = st.sidebar.selectbox("Industries Model",menu)
 
 raw_text = st.text_area("Your Text"," ")
